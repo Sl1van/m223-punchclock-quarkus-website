@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'm223-punchclock-website';
+  range = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl()
+  }, [Validators.required]);
+  startDateFormControl = new FormControl('', [Validators.required]);
+  endDateFormControl = new FormControl('', [Validators.required]);
 }
