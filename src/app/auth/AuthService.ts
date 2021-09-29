@@ -28,5 +28,21 @@ export class AuthService {
       { headers}
     )
   }
+
+  public register(data : any): Observable<void>{
+    // submitForm form data on server and get a peax redirect object with the urls to redirect to
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    data = JSON.stringify(data);
+
+    // set form data params
+    return  this.http.post<void>(
+      'http://'+environment.restUrl + '/auth/register',
+      data,
+      { headers}
+    )
+  }
 }
 
