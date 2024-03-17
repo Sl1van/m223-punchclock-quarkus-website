@@ -1,3 +1,5 @@
+***This project is archived because it's a school project and is not going to get updated.***
+
 # M223PunchclockWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
